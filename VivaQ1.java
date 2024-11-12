@@ -14,20 +14,18 @@ public class VivaQ1 {
         int num = in.nextInt();
         if (num<0){
             System.out.println("Please enter a positive number.");
-            return;
         }
         
         else{
-            int sum = num;
-            while (sum >= 10){
+            while (num >= 10){
                 int ans= 0 ;
-                for(int i=sum ; i>0; i/=10){
+                for(int i=num ; i>0; i/=10){
                     ans+=i%10;
                 }
-                sum = ans;
+                num = ans;
             }
         
-        System.out.print("Sum of digits until single digit: "+sum);
+        System.out.print("Sum of digits until single digit: "+num);
         }
     }
 }
